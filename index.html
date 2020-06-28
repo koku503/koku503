@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+        <style>
+            body{
+                margin: 0;
+                font-family: 'ヒラギノ角ゴ Pro W3', sans-serif;
+            }
+            .wrap{
+                width: 100%;
+                min-height: 100vh;
+            }
+            .img{
+                width: 300px;
+                height: auto;
+                margin: 30px auto;
+            }
+            .gif{
+                width: 100%;
+            }
+            #in{width:100px;height: 50px;font-size: 24px;margin-left: 50%;transform: translate(-50%, 0%);border-radius: 6px;}
+        </style>
+        <script type="text/javascript">
+        function gate(){
+            var Input = prompt("");
+            if(Input == "kyogaku"){
+                location.href = "./kyogaku/index.html";
+            }
+            else{
+                location.href = "./common/koku-.gif"
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="img">
+                <img class="gif" src="./common/koku-.gif">
+            </div>
+            <div class="div1">
+                <input id="in" type="button" value="入室" onclick="gate()">
+            </div>
+        </div><!-- wrap -->
+    </body>
+</html>
