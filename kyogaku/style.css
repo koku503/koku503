@@ -83,7 +83,8 @@ body{
     text-align: right;
 }
 .footer{
-    width: 100%;
+    max-width: 720px;
+    margin: auto;
 }
 .text-combine{/*縦中横*/
     display: inline-block;
@@ -111,7 +112,7 @@ h2{
 .footer table{
     position: fixed;
     max-height: 70px;
-    width: 362px;
+    width: 20em;
     bottom: 5px;
     left: 50%;
     transform: translate(-50%, 0);
