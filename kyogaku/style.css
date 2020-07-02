@@ -13,6 +13,7 @@ body{
     overflow: visible;
 }
 .container{
+    width: 100%;
     padding-top: 30px;
     margin: 0 auto;
     height: calc(100vh - 30px); 
