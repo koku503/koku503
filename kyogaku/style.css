@@ -4,17 +4,15 @@ body, div, ul, p{
     border: 0;
 }
 body{
-    margin: 0 20px;
     background-color: floralwhite;
     color: black;
     font-family: 'ヒラギノ角ゴ Pro W3', sans-serif;
     text-align: center;
     font-size: 16px;
     line-height: 2;
+    overflow: visible;
 }
 .container{
-    width: 100%;
-    max-width: 720px;
     padding-top: 30px;
     margin: 0 auto;
     height: calc(100vh - 30px); 
@@ -66,9 +64,11 @@ body{
     border: black 1px solid;
 }
 .middle1-child{
+    display: flex;
     margin-bottom: calc(10vh - 10%);
     margin-top: auto;
 }
+.hh{margin-top:3px;height:100%; height: 3px;background-color: floralwhite;}
 .middle1-child a{
     font-size: 16px;
 }
