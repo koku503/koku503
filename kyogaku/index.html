@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="ja">
     <head>
@@ -9,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <script type="text/javascript" src="script.js"></script>
         <style>
+            .main{width: 100%;}
             .download{
                 width: 100%;
                 max-width: 400px;
@@ -16,7 +16,11 @@
                 text-align: justify;
                 border: #ddd 1px solid;
                 border-radius: 6px;
-                padding: 6px 12px;
+                padding: 6px 0px;
+            }
+            .download> div{
+                width: calc(100% - 24px);
+                margin: 0 auto;
             }
             .h2{font-size: 20px; font-weight: bold;}
         </style>
@@ -57,11 +61,13 @@
                    </tbody>
                </table>
                <div class="download">
-                   <p class="h2">ダウンロード</p>
-                   <p>アプリをダウンロードできます。</p>
-                   <p>
-                       <a href="./Download/Android/20200702204612-app-debug.apk">Android 1.0.2</a>&emsp;Android
-                    </p>
+                   <div>
+                       <p class="h2">ダウンロード</p>
+                       <p>アプリをダウンロードできます。</p>
+                       <p>
+                           <a href="./Download/Android/20200702204612-app-debug.apk">Android 1.0.2</a>&emsp;Android
+                        </p>
+                   </div>
                </div><!--download-->
             </div><!--main-->
             <div class="footer" style="text-align: justify;">
