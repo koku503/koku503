@@ -145,6 +145,7 @@ h2{
 .top_table td span:hover, .footer table span:hover, .index_table span:hover, .middle1-child span:hover{
     background-color: blue;
 }
+
 /***下向き中カッコ***/
 .tyu-kakko{
     display: table-cell;
@@ -177,6 +178,7 @@ h2{
     border-width: 6.4px 5.4px 0 5.4px;
     z-index: 5;
 }
+
 /***上向き中カッコ***/
 .tyu-kakko-ue{
     display: inline-block;
@@ -209,6 +211,7 @@ h2{
     border-width: 0 5.4px 6.4px 5.4px;
     z-index: 5;
 }
+
 /***〇で始まるpに適用***/
 .maru{
     margin-top: 1em;
@@ -220,9 +223,20 @@ h2{
     position: absolute;
     top: 1em;
     content: "〇";
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 32px;
 }
+
+/***縦棒***//* .lenの中に.rと.lを入れる */
+.len{width: 100%;height: 100%;}
+.r{width: 50%;height: 100%;float: right;border-left: 0.5px solid black;}
+.l{width: 50%;height: 100%;float: left;border-right: 0.5px solid black;}
+
 /***二重丸***/
 .niju-maru::after{
     content: "◎";
-    display: inline-block; font-size: 24px; line-height: 32px; transform: translate(0, -4px);
+    font-weight: 600;
+    display: inline-block; font-size: 22px;line-height: 32px;transform: translate(0, -8px);
 }
+.niju-maru ~ span{display: inline-block;transform: translate(0, -4px);}
