@@ -40,7 +40,7 @@ body{
 }
 .middle{
     padding-top: 20px;
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
     height: calc(100% - 135px);
     -ms-writing-mode: tb-rl;
