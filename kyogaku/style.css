@@ -11,15 +11,15 @@ body{
     text-align: center;
     font-size: 16px;
     line-height: 2;
-    overflow: visible;
+    overflow: hidden;
 }
 .container{
-    max-width: 720px;
+    width: 720px;
     padding-top: 30px;
     margin: 0 auto;
     height: calc(100vh - 30px); 
     border: none;
-    overflow: visible;
+    overflow: hidden;
 }
 .header{
     margin-top: 10px;
@@ -39,10 +39,12 @@ body{
 }
 .middle{
     padding-top: 20px;
-    margin-left: calc(50% + 20px);
+    width: 50%;
+    margin: 0 auto;
+    /* margin-left: calc(50% + 20px); */
     height: calc(100% - 135px);
-    transform: translate(-50%, 0);
-    padding: 0 35px 0;
+    /* transform: translate(-50%, 0); */
+    /* padding: 0 20px 0; */
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
     text-align: justify;
@@ -50,6 +52,7 @@ body{
 }
 .middle1{
     display: flex;
+    width: 80px;
 }
 .middle1 h2{
     line-height: 40px;
@@ -75,8 +78,18 @@ body{
     font-size: 16px;
 }
 .middle2{
+    width: calc(100% - 80px);
     padding-top: 20px;
-    overflow: visible;
+    overflow: scroll;
+    -ms-overflow-style:none;
+    scrollbar-width:none;
+}
+.middle2::-webkit-scrollbar{display: none;}
+.middle2> p, .middle2> div, .middle2> table{
+    transform: translateX(-120px) translateX(17%);
+}
+#a .middle2> p:last-child, #a .middle2> div:last-child, #a .middle2> table:last-child{
+    border-left: #eee 0.1px solid;
 }
 .bottom{
     display: block;
@@ -215,13 +228,14 @@ h2{
 /***〇で始まるpに適用***/
 .maru{
     margin-top: 1em;
+    position: relative;
 }
 .maru span:not(.bottom, .text-combine){
     display: block;
 }
 .maru span:not(.bottom)::before{
     position: absolute;
-    top: 1em;
+    top: -1em;
     content: "〇";
     font-size: 15px;
     font-weight: 300;
