@@ -15,7 +15,7 @@ body{
 }
 .container{
     width: 100%;
-    max-width: 720px;
+    max-width: 400px;
     padding-top: 30px;
     margin: 0 auto;
     height: calc(100vh - 30px); 
@@ -41,7 +41,6 @@ body{
 .middle{
     padding-top: 20px;
     width: 100%;
-    margin: 0 auto;
     height: calc(100% - 135px);
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
