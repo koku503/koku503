@@ -225,13 +225,14 @@ h2{
 
 /***〇で始まるpに適用***/
 .maru{
+    display: block;
     margin-top: 1em;
     position: relative;
 }
-.maru span:not(.bottom, .text-combine){
+.maru> span:not(.bottom, .text-combine){
     display: block;
 }
-.maru span:not(.bottom)::before{
+.maru> span:not(.bottom)::before{
     position: absolute;
     top: -1em;
     content: "〇";
