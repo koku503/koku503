@@ -83,7 +83,8 @@ body{
 }
 .middle2::-webkit-scrollbar{display: none;}
 .middle2> p, .middle2> div, .middle2> table{
-    transform: translateX(-120px) translateX(17%);
+    margin-right: calc(25% - 40px);
+    transform: translateX(17%);
 }
 #a .middle2> p:last-child, #a .middle2> div:last-child, #a .middle2> table:last-child{
     border-left: #eee 0.1px solid;
