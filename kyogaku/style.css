@@ -250,6 +250,6 @@ h2{
 .niju-maru::after{
     content: "◎";
     font-weight: 600;
-    display: inline-block; font-size: 22px;line-height: 32px;transform: translate(0, -8px);
+    display: inline-block; font-size: 20px;line-height: 32px;transform: translate(0, -8px);
 }
 .niju-maru ~ span{display: inline-block;transform: translate(0, -4px);}
