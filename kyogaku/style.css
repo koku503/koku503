@@ -85,6 +85,7 @@ body{
 .middle2> p, .middle2> div, .middle2> table{
     margin-right: calc(25% - 40px);
     transform: translateX(17%);
+    transform: translateX(22.5%) translateX(12px);
 }
 #a .middle2> p:last-child, #a .middle2> div:last-child, #a .middle2> table:last-child{
     border-left: #eee 0.1px solid;
