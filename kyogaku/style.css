@@ -1,3 +1,15 @@
+@font-face{
+    font-family: 'FontM';
+    src: url(./font/yumin.ttf);
+}
+@font-face{
+    font-family: 'FontG';
+    src: url(./font/msgothic.ttc);
+}
+@font-face{
+    font-family: 'FontK';
+    src: url(./font/HGRSKP.TTF);
+}
 body, div, ul, p{
     margin: 0;
     padding: 0;
@@ -7,7 +19,7 @@ body{
     margin: 0 20px;
     background-color: floralwhite;
     color: black;
-    font-family: 'ヒラギノ角ゴ Pro W3', sans-serif;
+    font-family: 'FontM';
     text-align: center;
     font-size: 16px;
     line-height: 2;
@@ -27,6 +39,7 @@ body{
     margin-left: 50%;
     transform: translate(-50%, 0);
     padding-bottom: 30px;
+    font-family: 'FontK';
 }
 #q .header{
     display: none;
@@ -45,8 +58,11 @@ body{
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
     text-align: justify;
-    overflow: visible;
+    overflow-x: scroll;
+    -ms-overflow-style:none;
+    scrollbar-width:none;
 }
+.middle::-webkit-scrollbar{display: none;}
 .middle1{
     display: flex;
     width: 80px;
@@ -75,20 +91,23 @@ body{
     font-size: 16px;
 }
 .middle2{
-    width: calc(100% - 80px);
+    min-width: 200px;
     padding-top: 20px;
-    overflow: scroll;
-    -ms-overflow-style:none;
-    scrollbar-width:none;
+    position: relative;
 }
-.middle2::-webkit-scrollbar{display: none;}
 .middle2> p, .middle2> div, .middle2> table{
     margin-right: calc(25% - 40px);
-    transform: translateX(17%);
     transform: translateX(22.5%) translateX(12px);
 }
-#a .middle2> p:last-child, #a .middle2> div:last-child, #a .middle2> table:last-child{
-    border-left: #eee 0.1px solid;
+#a .middle2::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 1px;
+    height: 60%;
+    background-color: darkblue;
 }
 .bottom{
     display: block;
@@ -117,6 +136,8 @@ h2{
     width: 100%;
     margin: auto;
     max-width: 400px;
+    font-family: 'FontG';
+    font-weight: 540;
 }
 .footer table{
     position: fixed;
@@ -127,6 +148,7 @@ h2{
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 3;
+    font-weight: 540;
 }
 .top_table td{
     width: 2em;
