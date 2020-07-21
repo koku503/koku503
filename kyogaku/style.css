@@ -57,15 +57,12 @@ body{
     height: calc(100% - 135px);
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
-    text-align: justify;
-    overflow-x: scroll;
-    -ms-overflow-style:none;
-    scrollbar-width:none;
+    text-align: justify; 
 }
-.middle::-webkit-scrollbar{display: none;}
 .middle1{
     display: flex;
     width: 80px;
+    height: 100%;
 }
 .middle1 h2{
     line-height: 40px;
@@ -86,28 +83,24 @@ body{
     margin-bottom: calc(10vh - 10%);
     margin-top: auto;
 }
-.hh{margin-top:3px;height:100%; height: 3px;background-color: floralwhite;}
 .middle1-child a{
     font-size: 16px;
 }
 .middle2{
-    min-width: 200px;
+    width: calc(100% - 80px);
+    height: calc(100% - 25px);
+    padding-bottom: 25px;
     padding-top: 20px;
-    position: relative;
+    overflow-x: scroll;
+    scrollbar-width: 1px;
+    -ms-overflow-style: 1px;
+    scrollbar-color: darkblue transparent;
 }
+.middle2::-webkit-scrollbar{height: 1px;background-color: transparent;}
+.middle2::-webkit-scrollbar-thumb{background: darkblue;}
 .middle2> p, .middle2> div, .middle2> table{
-    margin-right: calc(25% - 40px);
+    margin-right: 110px;
     transform: translateX(22.5%) translateX(12px);
-}
-#a .middle2::after{
-    content: "";
-    display: block;
-    position: absolute;
-    top: 20px;
-    left: 0;
-    width: 1px;
-    height: 60%;
-    background-color: darkblue;
 }
 .bottom{
     display: block;
