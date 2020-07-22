@@ -16,7 +16,7 @@ body, div, ul, p{
     border: 0;
 }
 body{
-    margin: 0 20px;
+    margin: 0 10px;
     background-color: floralwhite;
     color: black;
     font-family: 'FontM';
@@ -27,7 +27,7 @@ body{
 }
 .container{
     width: 100%;
-    max-width: 400px;
+    max-width: 380px;
     padding-top: 30px;
     margin: 0 auto;
     height: calc(100vh - 30px); 
@@ -101,6 +101,12 @@ body{
 .middle2> p, .middle2> div, .middle2> table{
     margin-right: 110px;
     transform: translateX(22.5%) translateX(12px);
+}
+@media screen and(max-width:400px){
+    .middle2> p, .middle2> div, .middle2> table{
+        margin-right: calc(50vw - 90px);
+        transform: translateX(22.5%) translateX(20px);
+    }
 }
 .bottom{
     display: block;
@@ -269,3 +275,8 @@ h2{
     display: inline-block; font-size: 20px;line-height: 32px;transform: translate(0, -8px);
 }
 .niju-maru ~ span{display: inline-block;transform: translate(0, -4px);}
+
+/***ゴシック体***/
+.fontG{
+    font-family: 'FontG';
+}
