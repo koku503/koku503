@@ -1,3 +1,13 @@
+@font-face{
+    /***縦書き明朝***/
+    font-family: 'FontM';
+    src: url(./font/fontM3.woff);
+}
+@font-face{
+    /***横書き明朝***/
+    font-family: 'FontM-yoko';
+    src: url(./font/fontM0.woff);
+}
 body, div, ul, p{
     margin: 0;
     padding: 0;
@@ -7,7 +17,7 @@ body{
     margin: 0 10px;
     background-color: floralwhite;
     color: black;
-    font-family: 'ＭＳ Ｐ明朝','MS PMincho';
+    font-family: 'FontM';
     text-align: center;
     font-size: 16px;
     line-height: 2;
@@ -29,8 +39,8 @@ body{
     margin-bottom: 30px;
 }
 .daiji{
-    width: 190px;
     height: 42px;
+    width: auto;
     margin: auto;
 }
 #q .header{
@@ -43,6 +53,7 @@ body{
 .header h1{
     margin: 0;
 }
+.main h2{font-family: 'FontM-yoko';}
 .middle{
     padding-top: 20px;
     width: 100%;
@@ -139,6 +150,7 @@ h2{
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 3;
+    font-family: 'FontM-yoko';
     font-weight: 540;
 }
 .top_table td{
@@ -263,12 +275,22 @@ h2{
 /***二重丸***/
 .niju-maru::after{
     content: "◎";
-    font-weight: 600;
-    display: inline-block; font-size: 20px;line-height: 32px;transform: translate(0, -8px);
+    display: inline-block; font-size: 18px;line-height: 32px;padding-bottom: 3px;
 }
 .niju-maru ~ span{display: inline-block;transform: translate(0, -4px);}
 
 /***ゴシック体***/
 .fontG{
     font-family: 'ＭＳ Ｐゴシック','MS PGothic';
+}
+
+/***横書き明朝***/
+.fontM-yoko{
+    font-family: 'FontM-yoko';
+}
+
+/***90度回転***/
+.deg90{
+    display: inline-block;
+    transform: rotate(90deg);
 }
