@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-        <title>アプリ|虚空</title>
+        <title>アプリ｜虚空</title>
         <link rel="icon" href="./common/koku-.gif">
         <style>
             body{
@@ -26,9 +26,13 @@
             .p{border-bottom: #ddd 1px solid;}
             .applist{display: flex;border-bottom: #ddd 1px solid;}
             .applist> div{margin-left: 10px;}
-            .applist img:not(.dl-img){width: calc(40px + 1vw);margin-top: 24px;}
-            .dl-img{width: calc(80px + 3vw);margin-top: 20px;}
+            .appimg{width: calc(30% - 10px);}
+            .appimg> img{width: 100%;height: auto;}
+            .applist> div:nth-child(2){width: calc(70% - 10px);}
             .list-title{font-size: 24px;line-height: 1.2;}
+            .dl-list{height: calc(100% - 28.5px);}
+            .dl-list> div{height: 50%;position: relative;}
+            .dl{height: calc(100% - 10px);position: absolute;top: 5px;left: 5px;}
         </style>
     </head>
     <body>
@@ -42,17 +46,18 @@
             <div class="d2"></div>
             <div class="p">
                 <div class="applist">
-                    <!-- 20200723130210-app-debug.apk -->
-                    <div>
+                    <div class="appimg">
                         <img src="./IMG/kyogaku/kyogkau.png">
                     </div>
                     <div>
-                        <p class="list-title">教学聖典</p>
-                        <p>
-                            <a href="./DL/kyogaku-Android-113.apk">
-                                <img class="dl-img" src="../common/google-play-badge.png">
-                            </a>
-                        </p>
+                        <div class="list-title">教学聖典</div>
+                        <div class="dl-list">
+                            <div>
+                                <a href="./DL/kyogaku/kyogaku-Android-113.apk">
+                                    <img class="dl" src="./IMG/google-play-badge.png">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
