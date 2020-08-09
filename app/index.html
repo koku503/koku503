@@ -6,6 +6,9 @@
         <title>アプリ｜虚空</title>
         <link rel="icon" href="./common/koku-.gif">
         <style>
+            table{border-collapse: collapse;}
+            th, td{padding: 6px;}
+            table, th, td{border: 1px solid black;}
             body{
                 margin: 10px;
                 font-family: 'ヒラギノ角ゴ Pro W3', sans-serif;
@@ -24,15 +27,15 @@
             .top-r{margin-left: auto;}
             .d2{height: 40px;}
             .p{border-bottom: #ddd 1px solid;}
-            .applist{display: flex;border-bottom: #ddd 1px solid;}
+            .applist{display: flex;border-bottom: #ddd 1px solid;padding-bottom: 10px;}
             .applist> div{margin-left: 10px;}
             .appimg{width: calc(30% - 10px);}
             .appimg> img{width: 100%;height: auto;}
-            .applist> div:nth-child(2){width: calc(70% - 10px);}
+            .applist> div:nth-child(2){width: calc(70% - 20px);}
             .list-title{font-size: 24px;line-height: 1.2;}
-            .dl-list{height: calc(100% - 28.5px);}
-            .dl-list> div{height: 50%;position: relative;}
             .dl{height: calc(100% - 10px);position: absolute;top: 5px;left: 5px;}
+            .c009{background-color: #eee;}
+            .px18{font-size: 18px;}
         </style>
     </head>
     <body>
@@ -51,13 +54,35 @@
                     </div>
                     <div>
                         <div class="list-title">教学聖典</div>
-                        <div class="dl-list">
-                            <div>
-                                <a href="./DL/kyogaku/kyogaku-Android-113.apk">
-                                    <img class="dl" src="./IMG/google-play-badge.png">
-                                </a>
-                            </div>
-                        </div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        Android
+                                    </th>
+                                    <td>
+                                        <a href="./DL/kyogaku/kyogaku-Android-1.1.3.apk">kyogaku-Android-1.1.3.apk</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Windows</th>
+                                    <td>
+                                        <a href="./DL/kyogaku/win/教学聖典-1.1.3-win.zip">教学聖典-1.1.3-win.zip</a><br>
+                                        <a href="./DL/kyogaku/win/app-builder-bin.zip">app-builder-bin.zip</a><br>
+                                        <a href="./DL/kyogaku/win/electron.zip">electron.zip</a><br>
+                                        <ol>
+                                            <span class="px18">Windows版アプリのダウンロードの仕方</span>
+                                            <li>
+                                                <span class="c009">教学聖典-1.1.3-win.zip</span>、<span class="c009">app-builder-bin.zip</span>、<span class="c009">electron.zip</span>をダウンロードし、それぞれ解凍する。
+                                            </li>
+                                            <li>
+                                                <span class="c009">app-builder-bin</span>、<span class="c009">electron</span>を、<span class="c009">教学聖典-1.1.3-win\resources\app.asar.unpacked\node_modules</span>にコピーする。
+                                            </li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
