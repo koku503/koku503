@@ -1,0 +1,342 @@
+@font-face{
+    /***縦書き明朝***/
+    font-family: 'FontM';
+    src: url(./font/fontM3.woff);
+}
+@font-face{
+    /***横書き明朝***/
+    font-family: 'FontM-yoko';
+    src: url(./font/fontM0.woff);
+}
+body, div, ul, p, td{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+a{color: darkblue;}
+a:active{color: darkblue;}
+table{border-collapse: collapse;}
+body{
+    margin: 0 10px;
+    background-color: floralwhite;
+    color: black;
+    font-family: 'FontM';
+    text-align: center;
+    font-size: 16px;
+    line-height: 2;
+    overflow: hidden;
+    font-size: calc((100vh - 130px)/25);
+}
+.container{
+    width: 100%;
+    padding-top: 30px;
+    margin: 0 auto;
+    height: calc(100vh - 30px); 
+    border: none;
+    overflow: hidden;
+}
+.header{
+    margin-top: 10px;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+    margin-bottom: 30px;
+}
+.daiji{
+    height: 42px;
+    width: auto;
+    display: inline-block;
+}
+#q .header{
+    display: none;
+}
+.main h2{font-family: 'FontM-yoko';}
+.middle{
+    width: 100%;
+    height: calc(100% - 75px);
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    text-align: justify; 
+}
+.middle1{
+    display: flex;
+    height: 100%;
+}
+.middle1 h2{
+    width: 38px;
+    line-height: 38px;
+    text-align: center;
+    margin: 0 auto;
+}
+.middle1> h2:first-child{
+    margin: 0 auto;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 50%;
+    border: black 1px solid;
+}
+.middle1-child{
+    display: flex;
+    margin-bottom: calc(10vh - 10%);
+    margin-top: auto;
+}
+.middle1-child a{
+    font-size: 16px;
+}
+.middle2:not(.m2){
+    height: calc(23em - 15px);
+}
+.m2{height: calc(25em - 15px);}
+.middle2, .m2{
+    width: calc(100% - 40px);
+    padding: 1em 0 15px;
+    overflow-x: scroll;
+    scrollbar-width: 1px;
+    -ms-overflow-style: 1px;
+    scrollbar-color: darkblue transparent;
+}
+.middle2::-webkit-scrollbar, .m2::-webkit-scrollbar{height: 1px;background-color: transparent;}
+.middle2::-webkit-scrollbar-thumb, .m2::-webkit-scrollbar-thumb{background: darkblue;}
+.middle2> p, .middle2> div, .middle2> table, .m2> p, .m2> div, .m2> table{
+    margin-right: calc(50vw - 40px);
+    transform: translateX(20.6%);
+    transform: translateX(14%) translateX(14.8px);
+}
+@media screen and (min-width:400px){
+    .middle2, .m2{
+        scrollbar-width: auto;
+        -ms-overflow-style: 8px;
+    }
+    .middle2::-webkit-scrollbar, .m2::-webkit-scrollbar{height: auto;}
+}
+.bottom{
+    display: block;
+    text-align: right;
+    margin-right: calc(-1 * (100vh - 180px)/46);
+    margin-left: calc((100vh - 180px)/23);
+}
+.footer{
+    max-width: 720px;
+    margin: auto;
+}
+h1{
+    font-size: 28px;
+    line-height: 1.5;
+}
+h2{
+    font-size: 24px;
+    line-height: 1.2;
+}
+.index_table, .top_table{
+    width: 100%;
+    margin: auto;
+    max-width: 400px;
+    font-family: 'ＭＳ Ｐゴシック','MS PGothic';
+    font-weight: 540;
+    font-size: 16px;
+}
+.footer table{
+    position: fixed;
+    width: 90%;
+    max-width: 400px;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 3;
+    font-family: 'FontM-yoko';
+    font-weight: 540;
+    font-size: 16px;
+}
+.top_table td{
+    width: 2em;
+    height: 2em;
+    padding: 1px;
+}
+.top_table td, .footer table td, .index_table td{
+    padding: 1px;
+}
+.footer tr:nth-child(1) td{padding-top: 0;}
+.footer tr:nth-child(2) td{padding-bottom: 0;}
+.top_table td span, .footer table span, .index_table span{
+    text-align: center;
+    display: inline-block;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    font-weight: bolder;
+    border: black 1px solid;
+    border-radius: 2px;
+}
+.middle1-child span{
+    display: inline-block;
+    padding: 4px 0;
+    width: 100%;
+    height: 100%;
+    border: black 1px solid;
+    font-size: 20px;
+    line-height: 2;
+    border-radius: 2px;
+}
+.top_table td span:hover, .footer table span:hover, .index_table span:hover, .middle1-child span:hover{
+    background-color: darkblue;
+    color: floralwhite;
+}
+
+td:not(.n-r){position: relative;}
+
+/***ゴシック体***/
+.fontG{
+    font-family: 'ＭＳ Ｐゴシック','MS PGothic';
+    position: absolute;
+    top: 0;
+    right: 0;
+    word-break: keep-all;
+}
+
+/***下向き中カッコ***/
+.tyu-kakko{
+    display: table-cell;
+    display: inline-block;
+    position: relative;
+    border-left: black 1px solid;
+    border-right: black 1px solid;
+    border-bottom: black 1px solid;
+    border-radius: 0 0 30px 30px;
+    height: calc((100vh - 130px)*0.4/25);
+}
+.tyu-kakko::before, .tyu-kakko::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    margin: auto;
+}
+.tyu-kakko::before{
+    top: calc((100vh - 130px)*0.4/25);
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+    border-top-width: calc((100vh - 130px)*0.4/25);
+    border-right-width: calc((100vh - 130px)*0.4/25);
+    border-bottom-width: 0;
+    border-left-width: calc((100vh - 130px)*0.4/25);
+}
+.tyu-kakko::after{
+    top: calc((100vh - 130px)*0.3375/25);
+    border-style: solid;
+    border-color: floralwhite transparent transparent transparent;
+    border-top-width: calc((100vh - 130px)*0.4/25);
+    border-right-width: calc((100vh - 130px)*0.3375/25);
+    border-bottom-width: 0;
+    border-left-width: calc((100vh - 130px)*0.3375/25);
+    z-index: 5;
+}
+
+/***上向き中カッコ***/
+.tyu-kakko-ue{
+    display: inline-block;
+    position: relative;
+    border-left: black 1px solid;
+    border-right: black 1px solid;
+    border-top: black 1px solid;
+    border-radius: 30px 30px 0 0;
+    height: 6.4px;
+}
+.tyu-kakko-ue::before, .tyu-kakko-ue::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    margin: auto;
+}
+.tyu-kakko-ue::before{
+    top: -6.4px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+    border-width: 0 6.4px 6.4px 6.4px;
+}
+.tyu-kakko-ue::after{
+    top: -5.4px;
+    border-style: solid;
+    border-color: transparent transparent floralwhite transparent;
+    border-width: 0 5.4px 6.4px 5.4px;
+    z-index: 5;
+}
+
+/***〇で始まるpに適用***/
+.maru> span:not(.bottom, .text-combine), .maru-c{
+    position: relative;
+}
+.maru> span:not(.bottom)::before, .maru-c::before{
+    position: absolute;
+    display: inline-block;
+    top: -1em;
+    content: "〇";
+}
+
+/***縦中横***/
+.tc1, .tc2, .tc3, .tc4, .tc5, .tc6, .tc7, .tc8, .tc9, .tc10{
+    position: relative;
+}
+.tc1::before, .tc2::before, .tc3::before, .tc4::before, .tc5::before, .tc6::before, .tc7::before, .tc8::before, .tc9::before, .tc10::before{
+    display: inline-block;
+    position: absolute;
+    top: -1.2em;
+    transform: rotate(-90deg);
+    font-family: 'FontM';
+}
+.tc1::before{content: "(1)";}.tc2::before{content: "(2)";}.tc3::before{content: "(3)";}.tc4::before{content: "(4)";}.tc5::before{content: "(5)";}.tc6::before{content: "(6)";}.tc7::before{content: "(7)";}.tc8::before{content: "(8)";}.tc9::before{content: "(9)";}.tc10::before{content: "(10)";}
+/*旧式*/
+.text-combine{
+    display: inline-block;
+    padding-bottom: 3px;
+    text-combine-upright: all;
+    -webkit-text-combine: horizontal;
+    -ms-text-combine-horizontal: all;
+}
+
+/***縦棒***//* .lenの中に.rと.lを入れる */
+td> .len{position: absolute;top: 0;right: 0;}
+.len{width: calc((100vh - 130px)/12.5);height: 100%;}
+.r{width: calc(50% - 0.1px);height: calc(100% - 3.6px);margin: 1.8px 0;float: right;border-left: 0.1px solid black;}
+.l{width: calc(50% - 0.1px);height: calc(100% - 3.6px);margin: 1.8px 0;float: left;border-right: 0.1px solid black;}
+
+/***二重丸***/
+.niju-maru::before{
+    content: "◎";
+    display: inline-block;
+    font-size: 1.25em;
+    line-height: 2em;
+}
+.niju-maru ~ span{display: inline-block;}
+
+/***横書き明朝***/
+.fontM-yoko{
+    font-family: 'FontM-yoko';
+}
+
+/***90度回転***/
+.deg90{
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+/***絶対・相対***/
+.rel{position: relative;}
+.abs{position: absolute;}
+
+/***高さ***/
+.em1{height: 1em;}
+.em2{height: 2em;}
+.em3{height: 3em;}
+.em4{height: 4em;}
+.em5{height: 5em;}
+.em7{height: 7em;}
+
+/***Display***/
+.flex{display: flex;}
+.inb{display: inline-block;}
