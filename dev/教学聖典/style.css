@@ -93,23 +93,16 @@ body{
     width: calc(100% - 40px);
     padding: 1em 0 15px;
     overflow-x: scroll;
-    scrollbar-width: 1px;
-    -ms-overflow-style: 1px;
     scrollbar-color: darkblue transparent;
 }
-.middle2::-webkit-scrollbar, .m2::-webkit-scrollbar{height: 1px;background-color: transparent;}
+.middle2::-webkit-scrollbar, .m2::-webkit-scrollbar{
+    background-color: transparent;
+}
 .middle2::-webkit-scrollbar-thumb, .m2::-webkit-scrollbar-thumb{background: darkblue;}
 .middle2> p, .middle2> div, .middle2> table, .m2> p, .m2> div, .m2> table{
     margin-right: calc(50vw - 40px);
     transform: translateX(20.6%);
     transform: translateX(14%) translateX(14.8px);
-}
-@media screen and (min-width:400px){
-    .middle2, .m2{
-        scrollbar-width: auto;
-        -ms-overflow-style: 8px;
-    }
-    .middle2::-webkit-scrollbar, .m2::-webkit-scrollbar{height: auto;}
 }
 .bottom{
     display: block;
