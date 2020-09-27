@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>NK式HTML構造の説明書</title>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <h1>NK式HTML構造の説明書</h1>
+            <ul>
+                <li>
+                    body&emsp;margin=8px,&ensp;font-size=16px,&ensp;text-align=justify
+                </li>
+                <ul>
+                    <li>
+                        div.wrap&emsp;width=100%
+                    </li>
+                    <ul>
+                        <li>
+                            div.ue&emsp;.flexと併用。1つまたは2つ上の階層へのリンク。
+                        </li>
+                        <ul>
+                            <li>
+                                a
+                            </li>
+                            <ul>
+                                <li>
+                                    span.wl-btn&emsp;後述
+                                </li>
+                            </ul>
+                        </ul>
+                        <li>
+                            h1&emsp;font-size=26px,&ensp;text-align=center
+                        </li>
+                        <li>
+                            div.wrap-flex&emsp;ビューポート1000以上でdisplay=flex
+                        </li>
+                        <ul>
+                            <li>
+                                div.wrap-1&emsp;枠あり。ビューポート500未満でw=calc(100% - 40px),&ensp;500以上でw=calc(500px - 56px)
+                            </li>
+                            <ul>
+                                <li>
+                                    h2&emsp;font-size=22,&ensp;texxt-align=center
+                                </li>
+                                <li>
+                                    div.wl-btn&emsp;
+                                </li>
+                                <ul>
+                                    <li>
+                                        a
+                                    </li>
+                                    <ul>
+                                        <li>
+                                            span.wl-btn&emsp;:hoverで変色
+                                        </li>
+                                    </ul>
+                                </ul>
+                            </ul>
+                        </ul>
+                    </ul>
+                </ul>
+            </ul>
+        </div>
+    </body>
+</html>
