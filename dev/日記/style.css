@@ -6,6 +6,11 @@ body{
 }
 div.wrap{
     width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+div.main{
+    min-height: calc(100vh - 160px);
 }
 .flex{
     display: flex;

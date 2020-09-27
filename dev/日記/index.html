@@ -5,22 +5,44 @@
         <meta name="viewport" content="width=device-width">
         <title>日記</title>
         <link rel="stylesheet" type="text/css" href="./style.css">
+        <style>
+            .purple{
+                height: 20px;
+                width: 50%;
+                margin: auto;
+                background-color: purple;
+            }
+            .gen{
+                display: none;
+            }
+            .foot:hover .gen{
+                display: block;
+            }
+        </style>
     </head>
     <body>
         <div class="wrap">
             <h1>日記</h1>
-            <div class="wrap-flex">
-                <div class="wrap-1">
-                    <h2>時系列</h2>
-                    <div class="wl-btn">
-                        <a href="./2020年/index.html">
-                            <span class="wl-btn">2020年</span>
-                        </a>
+            <div class="main">
+                <div class="wrap-flex">
+                    <div class="wrap-1">
+                        <h2>時系列</h2>
+                        <div class="wl-btn">
+                            <a href="./2020年/index.html">
+                                <span class="wl-btn">2020年</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="footer">
                 <a href="./man.html">NK式HTML構造の説明書</a>
+            </div>
+            <div class="foot">
+                <div class="purple"></div>
+                <div class="gen">
+                    <a href="../../../shokugyoki/index.html">職業記</a>
+                </div>
             </div>
         </div>
     </body>
