@@ -31,14 +31,32 @@ div.wrap-1{
     border: 1px solid gainsboro;
     border-radius: 18px;
 }
-@media screen and (min-width: 500px){
-    div.wrap-1{
-        width: calc(500px - 56px);
-    }
+
+/* 上部階層やページ内の移動 */
+.ue{
+    display: flex;
 }
-@media screen and (min-width: 1000px){
+.ue> div{
+    margin-left: 8px;
+}
+.navi{
+    position: fixed;
+    top: 0;
+    right: 8px;
+}
+.navi li{
+    list-style: none;
+}
+
+@media screen and (min-width: 600px){
     div.wrap-flex{
         display: flex;
+    }
+    div.wrap-1{
+        width: calc(50vw - 56px);
+    }
+    .navi{
+        right: 56px;
     }
 }
 span.wl-btn{
@@ -50,6 +68,28 @@ span.wl-btn{
 span.wl-btn:hover{
     background-color: azure;
 }
-.ue> div{
-    margin-left: 8px;
+
+/* foot */
+#purple{
+    display: none;
+}
+label.purple{
+    display: block;
+    padding: 1em;
+    width: calc(100% - 2em);
+    margin: auto;
+    background-color: purple;
+}
+label.purple a{
+    color: #fff;
+}
+label.purple a:active{
+    color: azure;
+}
+div.purple{
+    width: calc(100% - 2em);
+    display: none;
+}
+#purple:checked ~ label.purple div.purple{
+    display: block;
 }
