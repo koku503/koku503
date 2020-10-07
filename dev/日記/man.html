@@ -4,65 +4,222 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>NK式HTML構造の説明書</title>
-        <link rel="stylesheet" type="text/css" href="./style.css">
+        <style>
+            body{
+                margin: 8px;
+                font-family: '游明朝', sans-serif;
+                font-size: 16px;
+                text-align: justify;
+            }
+            div.wrap{
+                width: 100%;
+                max-width: 1000px;
+                margin: auto;
+            }
+            div.main{
+                min-height: calc(100vh - 160px);
+            }
+            .flex{
+                display: flex;
+            }
+            h1{
+                font-size: 26px;text-align: center;
+            }
+            h2{
+                font-size: 22px;text-align: center;
+            }
+            h3{
+                font-size: 18px;
+            }
+            div.wrap-1{
+                width: calc(100% - 40px);
+                margin: 20px 10px;
+                padding: 9px;
+                border: 1px solid gainsboro;
+                border-radius: 18px;
+            }
+
+            /* 上部階層やページ内の移動 */
+            .ue{
+                display: flex;
+            }
+            .ue> div{
+                margin-left: 8px;
+            }
+            .navi{
+                position: fixed;
+                top: 0;
+                right: 8px;
+            }
+            .navi li{
+                list-style: none;
+            }
+
+            @media screen and (min-width: 600px){
+                div.wrap-flex{
+                    display: flex;
+                }
+                div.wrap-1{
+                    width: calc(50vw - 56px);
+                }
+                .navi{
+                    right: 56px;
+                }
+            }
+            span.wl-btn{
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                padding: 2px;
+            }
+            span.wl-btn:hover{
+                background-color: azure;
+            }
+
+            /* foot */
+            #purple{
+                display: none;
+            }
+            label.purple{
+                display: block;
+                padding: 1em;
+                width: calc(100% - 2em);
+                margin: auto;
+                background-color: purple;
+            }
+            label.purple a{
+                color: #fff;
+            }
+            label.purple a:active{
+                color: azure;
+            }
+            div.purple{
+                width: calc(100% - 2em);
+                display: none;
+            }
+            #purple:checked ~ label.purple div.purple{
+                display: block;
+            }
+        </style>
     </head>
     <body>
         <div class="wrap">
             <h1>NK式HTML構造の説明書</h1>
-            <ul>
-                <li>
-                    body&emsp;margin=8px,&ensp;font-size=16px,&ensp;text-align=justify
-                </li>
-                <ul>
-                    <li>
-                        div.wrap&emsp;width=100%,&ensp;max-width=1000
-                    </li>
-                    <ul>
-                        <li>
-                            div.ue&emsp;.flexと併用。1つまたは2つ上の階層へのリンク。
-                        </li>
-                        <ul>
-                            <li>
-                                a
-                            </li>
-                            <ul>
-                                <li>
-                                    span.wl-btn&emsp;後述
-                                </li>
-                            </ul>
-                        </ul>
-                        <li>
-                            h1&emsp;font-size=26px,&ensp;text-align=center
-                        </li>
-                        <li>
-                            div.wrap-flex&emsp;ビューポート1000以上でdisplay=flex
-                        </li>
-                        <ul>
-                            <li>
-                                div.wrap-1&emsp;枠あり。ビューポート500未満でw=calc(100% - 40px),&ensp;500以上でw=calc(500px - 56px)
-                            </li>
-                            <ul>
-                                <li>
-                                    h2&emsp;font-size=22,&ensp;texxt-align=center
-                                </li>
-                                <li>
-                                    div.wl-btn&emsp;
-                                </li>
-                                <ul>
-                                    <li>
-                                        a
-                                    </li>
-                                    <ul>
-                                        <li>
-                                            span.wl-btn&emsp;:hoverで変色
-                                        </li>
-                                    </ul>
-                                </ul>
-                            </ul>
-                        </ul>
-                    </ul>
-                </ul>
-            </ul>
+            <style>
+                .shin-table th, .shin-table td{
+                    border: 1px solid black;
+                }
+            </style>
+            <table class="shin-table">
+                <tr>
+                    <th>親要素</th>
+                    <th>HTML</th>
+                    <th>CSS</th>
+                    <th>説明</th>
+                </tr>
+                <tr>
+                    <td>html</td>
+                    <td>body</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>body</td>
+                    <td>wrap</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>wrap</td>
+                    <td>h1</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>wrap</td>
+                    <td>div.ue</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>div.ue&gt;div&gt;a</td>
+                    <td>span.wl-btn</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>div.wrap</td>
+                    <td>div.navi</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>div.navi&gt;ul&gt;li</td>
+                    <td>a[href=#wrap&ensp;など]&gt;span.wl-btn</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>div.wrap</td>
+                    <td>div.main</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>div.main</td>
+                    <td>div.wrap-flex</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>div.wrap-flex</td>
+                    <td>div.wrap-1,#[直下のh2の題]</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>div.wrap-1</td>
+                    <td>h2</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>div.wrap-1</td>
+                    <td>h3</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>div.wrap-flex</td>
+                    <td>div.wrap-1&emsp;その２</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>div.wrap</td>
+                    <td>div.foot,&ensp;#foot</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>div.foot,&ensp;#foot</td>
+                    <td>input(type=checkbox&ensp;#=purple)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>div.foot,&ensp;#foot</td>
+                    <td>label.purple,&ensp;for=purple</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>label.purple</td>
+                    <td>div.purple[ここへ記入]</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
         </div>
     </body>
 </html>
