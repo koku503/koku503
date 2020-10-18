@@ -24,7 +24,7 @@ h2{
 h3{
     font-size: 18px;
 }
-div.wrap-1{
+div.wrap-1, div.wrap-2{
     width: calc(100% - 40px);
     margin: 20px 10px;
     padding: 9px;
@@ -92,4 +92,14 @@ div.purple{
 }
 #purple:checked ~ label.purple div.purple{
     display: block;
+}
+
+/* table */
+table.bd-table{
+    border-collapse: collapse;
+    max-width: 100%;
+    margin: 0 auto;
+}
+table.bd-table th, table.bd-table td{
+    border: 1px solid black;
 }
