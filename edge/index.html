@@ -3,34 +3,62 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,inicial-scale=1.0">
+    <meta name="apple-movile-web-app-capable" content="yes">
+    <meta name="movile-web-app-capable" content="yes">
     <style>
         body{
+            margin: 0;
             background-color: black;
             color: whitesmoke;
             text-size-adjust: 100%;
             font-size: 16px;
         }
-        .inner{
+        .wrap{
             width: 100%;
-            max-width: 360px;
-            margin: 0 auto;
+            height: 100vh;
+            overflow: hidden;
+            text-align: center;
+        }
+        .inner{
+            position: relative;
+            display: inline-block;
+            height: 100%;
+            text-align: justify;
+            /* width: 100%;
+            max-width: 360px; */
+            /* margin: auto; */
+        }
+        .content{
+            position: absolute;
+            display: table-cell;
+            vertical-align: middle;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
         h1{
             font-size: 1.2rem;
         }
+        li{
+            white-space: nowrap;
+        }
     </style>
 </head>
 <body>
-    <div class="inner">
-        <h1>用途</h1>
-        <ul>
-            <li>勤怠打刻</li>
-            <li>交通・宿泊手配</li>
-            <li>プロジェクト遂行</li>
-            <li>ＮＨＫニュースサイト</li>
-            <li>赴く先の事前調査</li>
-        </ul>
-        <a href="../index.html">.</a>
+    <div class="wrap">
+        <div class="inner">
+            <div class="content">
+                <h1>用途</h1>
+                <ul>
+                    <li>勤怠打刻</li>
+                    <li>交通・宿泊手配</li>
+                    <li>プロジェクト遂行</li>
+                    <li>ＮＨＫニュースサイト</li>
+                    <li>赴く先の事前調査</li>
+                </ul>
+                <a href="../index.html">.</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
