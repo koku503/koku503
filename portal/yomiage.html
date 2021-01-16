@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <script type="text/javascript" src="./jquery-3.5.1.min.js"></script>
+        <link rel="icon" href="./img/四方紋.png">
+        <title>読み上げ</title>
+        <style>
+            .index{
+                position: absolute;
+                height: 96vh;
+                width: 30vw;
+                left: 0;
+            }
+			.index:hover{
+				background-color: red;
+				opacity: 0.05;
+			}
+            .index span{
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+            }
+            @media screen and (min-width: 900px){
+                .index{
+                    width: calc(50vw - 450px);
+                }
+            }
+			body{
+				text-size-adjust: 100%;
+                background-color: black;
+			}
+            .wrap{
+                width: 100%;
+                max-width: 1000px;
+                margin: auto;
+            }
+            .video{
+                width: calc(100px + 50vw);
+                height: calc((200px + 100vw)/3.236);
+                margin-top: calc(50vh - (100px + 50vw)/3.236);
+                margin-left: calc(50% - (50px + 25vw));
+            }
+        </style>
+        <link rel="icon" href="./img/四方紋.png">
+        <title>ポータルサイト</title>
+    </head>
+    <body>
+        <div class="index">
+            <a href="../index.html"><span></span></a>
+        </div>
+        <div class="wrap">
+            <iframe class="video" src="https://www.youtube.com/embed/Cha7Cf0zS-Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </body>
+</html>

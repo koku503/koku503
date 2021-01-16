@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="./img/四方紋.png">
+        <title>曲尺</title>
+        <style>
+            .index{
+                position: absolute;
+                height: 96vh;
+                width: 30vw;
+                left: 0;
+            }
+            .index:hover{
+                background-color: red;
+                opacity: 0.05;
+            }
+            .index span{
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+            }
+            @media screen and (min-width: 900px){
+                .index{
+                    width: calc(50vw - 450px);
+                }
+            }
+            body{
+                margin: 8px;
+                font-size: 16px;
+                line-height: 1em;
+                text-size-adjust: 100%;
+                overflow: scroll;
+            }
+            .wrap{
+                width: 100%;
+                min-height: calc(100vh - 16px);
+                max-width: 900px;
+                margin: auto;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+            .wrap-p{
+                height: 12mm;
+                width: 120mm;
+                margin-left: calc(2em + 12mm);
+                /* margin-left: calc(50vw - 48mm + 1em); */
+                margin-top: 1em;
+                display: flex;
+            }
+            .sen-b{
+                height: 12mm;
+                width: 1mm;
+                border-left: 0.2mm solid black;
+                box-sizing: border-box;
+                position: relative;
+            }
+            .sen-1{
+                height: 11mm;
+                margin-top: 1mm;
+                width: 1mm;
+                border-left: 0.1mm solid black;
+                box-sizing: border-box;
+            }
+            .sen-2{
+                height: 10mm;
+                margin-top: 2mm;
+                width: 1mm;
+                border-left: 0.1mm solid black;
+                box-sizing: border-box;
+            }
+            .wrap-q{
+                /* height: 12mm;
+                width: 120mm;
+                display: flex;
+                transform: rotate(-90deg); */
+                height: 120mm;
+                width: 12mm;
+                margin-left: 2em;
+                /* margin-top: calc(53.5mm); */
+                /* margin-left: calc(50vw - 114mm + 1em); */
+            }
+            .wrap-q .sen-b{
+                height: 1mm;
+                width: 12mm;
+                border-left: none;
+                border-top: 0.2mm solid black;
+            }
+            .wrap-q .sen-1{
+                margin: 0;
+                height: 1mm;
+                width: 11mm;
+                margin-left: 1mm;
+                border-left: none;
+                border-top: 0.1mm solid black;
+            }
+            .wrap-q .sen-2{
+                margin: 0;
+                height: 1mm;
+                width: 10mm;
+                margin-left: 2mm;
+                border-left: none;
+                border-top: 0.1mm solid black;
+            }
+            #p0::before{
+                content: "0";
+            }
+            #q0::before{
+                content: "0";
+            }
+            #p1::before{
+                content: "1";
+            }
+            #q1::before{
+                content: "1";
+            }
+            #p2::before{
+                content: "2";
+            }
+            #q2::before{
+                content: "2";
+            }
+            #p3::before{
+                content: "3";
+            }
+            #q3::before{
+                content: "3";
+            }
+            #p4::before, #q4::before{
+                content: "4";
+            }
+            #p5::before, #q5::before{
+                content: "5";
+            }
+            #p6::before, #q6::before{
+                content: "6";
+            }
+            #p7::before, #q7::before{
+                content: "7";
+            }
+            #p8::before, #q8::before{
+                content: "8";
+            }
+            #p9::before, #q9::before{
+                content: "9";
+            }
+            #p10::before, #q10::before{
+                content: "10";
+            }
+            #p11::before, #q11::before{
+                content: "11";
+            }
+            #p12::before, #q12::before{
+                content: "12";
+            }
+            #p0::before, #p1::before, #p2::before, #p3::before, #p4::before, #p5::before, #p6::before, #p7::before, #p8::before, #p9::before, #p10::before, #p11::before, #p12::before{
+                position: absolute;
+                top: -1em;
+                left: -1.3em;
+                display: block;
+                width: 1.5em;
+                height: 1em;
+                text-align: right;
+            }
+            #q0::before, #q1::before, #q2::before, #q3::before, #q4::before, #q5::before, #q6::before, #q7::before, #q8::before, #q9::before, #q10::before, #q11::before, #q12::before{
+                position: absolute;
+                top: -0.5em;
+                left: -1.6em;
+                display: block;
+                width: 1.5em;
+                height: 1em;
+                text-align: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="index">
+            <a href="../index.html"><span></span></a>
+        </div>
+        <div class="wrap">
+            <div class="wrap-p">
+                <div class="sen-b" id="p0"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-1"></div>
+                <!-- 0.5 -->
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <!-- 1 -->
+                <div class="sen-b" id="p1"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-1"></div>
+                <!-- 0.5 -->
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <!-- 1 -->
+                <div class="sen-b" id="p2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-1"></div>
+                <!-- 0.5 -->
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <!-- 1 -->
+                <div class="sen-b" id="p3"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-1"></div>
+                <!-- 0.5 -->
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <!-- 1 -->
+                <div class="sen-b" id="p4"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-1"></div>
+                <!-- 0.5 -->
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <!-- 1 -->
+                <div class="sen-b" id="p5"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-1"></div>
+                <!-- 0.5 -->
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <!-- 1 -->
+                <div class="sen-b" id="p6"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-1"></div>
+                <!-- 0.5 -->
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <!-- 1 -->
+                <div class="sen-b" id="p7"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-1"></div>
+                <!-- 0.5 -->
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <!-- 1 -->
+                <div class="sen-b" id="p8"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-1"></div>
+                <!-- 0.5 -->
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <!-- 1 -->
+                <div class="sen-b" id="p9"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-1"></div>
+                <!-- 0.5 -->
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <!-- 1 -->
+                <div class="sen-b" id="p10"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-1"></div>
+                <!-- 0.5 -->
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <!-- 1 -->
+                <div class="sen-b" id="p11"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-1"></div>
+                <!-- 0.5 -->
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <!-- 1 -->
+                <div class="sen-b" id="p12"></div>
+            </div>
+            <!-- wrap-p -->
+            
+            <div class="wrap-q">
+                <div class="sen-b" id="q12"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-1"></div>
+                <!-- 0.5 -->
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <!-- 1 -->
+                <div class="sen-b" id="q11"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-1"></div>
+                <!-- 0.5 -->
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <!-- 1 -->
+                <div class="sen-b" id="q10"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-1"></div>
+                <!-- 0.5 -->
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <!-- 1 -->
+                <div class="sen-b" id="q9"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-1"></div>
+                <!-- 0.5 -->
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <!-- 1 -->
+                <div class="sen-b" id="q8"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-1"></div>
+                <!-- 0.5 -->
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <!-- 1 -->
+                <div class="sen-b" id="q7"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-1"></div>
+                <!-- 0.5 -->
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <!-- 1 -->
+                <div class="sen-b" id="q6"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-1"></div>
+                <!-- 0.5 -->
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <!-- 1 -->
+                <div class="sen-b" id="q5"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-1"></div>
+                <!-- 0.5 -->
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <!-- 1 -->
+                <div class="sen-b" id="q4"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-1"></div>
+                <!-- 0.5 -->
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <!-- 1 -->
+                <div class="sen-b" id="q3"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-1"></div>
+                <!-- 0.5 -->
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <!-- 1 -->
+                <div class="sen-b" id="q2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-1"></div>
+                <!-- 0.5 -->
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <!-- 1 -->
+                <div class="sen-b" id="q1"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-1"></div>
+                <!-- 0.5 -->
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <div class="sen-2"></div>
+                <!-- 1 -->
+                <div class="sen-b" id="q0"></div>
+            </div>
+            <!-- wrap-q -->
+        </div>
+    </body>
+</html>

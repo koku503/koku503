@@ -5,40 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
         <title>虚空</title>
         <link rel="icon" href="./common/koku-seihou.png">
-        <style>
-            body{
-                margin: 0;
-                font-family: 'ヒラギノ角ゴ Pro W3', sans-serif;
-            }
-            .wrap{
-                width: 100%;
-                min-height: 100vh;
-            }
-            .img{
-                width: 300px;
-                height: auto;
-                margin: 30px auto;
-            }
-            .gif{
-                width: 100%;
-            }
-            #in{width:100px;height: 50px;font-size: 24px;margin-left: 50%;transform: translate(-50%, 0%);border-radius: 6px;}
-        </style>
+        <link rel="stylesheet" type="text/css" href="./portal.css">
         <script type="text/javascript">
         function gate(){
             var Input = prompt("");
             if(Input == "ダウンロード"){
                 location.href = "./download/index.html";
             }
+            else if(Input == "ポータル"){
+                location.href = "./portal/index.html";
+            }
             else if(Input == "教学聖典"){
-                window.open("./dev/教学聖典/index.html", "", "width=360, height=720");
+                window.open("./教学聖典/index.html", "", "width=360, height=720");
             }
             else if(Input == "日記"){
-                const url = "./dev/日記/index.html";
-                window.open("./dev/日記/index.html", "_blank");
+                location.href = "./日記/index.html";
             }
-            else if(Input == "msedge"){
-                location.href = "./dev/msedge.html";
+            else if(Input == "edge"){
+                location.href = "./edge/index.html";
             }
             else{
                 location.href = "./common/koku-.gif";
@@ -47,13 +31,34 @@
         </script>
     </head>
     <body>
-        <div class="wrap">
+        <div class="cap">
             <div class="img">
                 <img class="gif" src="./common/koku-.gif">
             </div>
             <div class="div1">
-                <input id="in" type="button" value="入室" onclick="gate()">
+                <input id="in" type="button" value="入室" onclick="gate()" autofocus>
             </div>
-        </div><!-- wrap -->
+        </div><!-- cap -->
+        <div class="wrap">
+            <div class="flex1">
+                <div class="flex2l">
+                    <div class="ffl" id="link-btn_時計">
+                        <a href="./portal/clock.html"><span class="tenkai">時計</span></a>
+                    </div>
+                    <div class="ffr" id="link-btn_曲尺">
+                        <a href="./portal/scale.html"><span class="tenkai">曲尺</span></a>
+                    </div>
+                </div>
+                <div class="flex2r">
+                    <div class="ffl" id="link-btn_せせらぎ">
+                        <a href="./portal/seseragi.html"><span class="tenkai">せせらぎ</span></a>
+                    </div>
+                    <div class="ffr" id="link-btn_読み上げ">
+                        <a href="./portal/yomiage.html"><span class="tenkai">読み上げ</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- wrap -->
     </body>
 </html>

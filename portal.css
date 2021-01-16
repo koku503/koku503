@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+    font-family: 'ヒラギノ角ゴ Pro W3', sans-serif;
+    text-size-adjust: 100%;
+}
+.cap{
+    width: 100%;
+    min-height: 50vh;
+}
+.img{
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    margin: 30px auto;
+}
+.gif{
+    width: 100%;
+}
+#in{width:100px;height: 50px;font-size: 24px;margin-left: 50%;transform: translate(-50%, 0%);border-radius: 6px;}
+.wrap{
+    margin: 0;
+    width: 100%;
+}
+.flex1{text-align: center;}
+.flex2l, .flex2r{display: flex;}
+.ffl{float: left;width: 50%;min-height: 2.5em;line-height: 2.5em;}
+.ffr{float: right;width: 50%;min-height: 2.5em;line-height: 2.5em;}
+
+@media screen and (min-width:800px){
+    .flex1{display: flex;}
+    .flex2l{width: 50%;float: left;}
+    .flex2r{width: 50%;float: right;}
+}
+
+span.tenkai{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+span.tenkai:hover{opacity: 0.6;}
+#link-btn_時計{
+    background-color: tan;
+}
+#link-btn_曲尺{
+    background-color: lightgreen;
+}
+#link-btn_せせらぎ{
+    background-color: cadetblue;
+}
+#link-btn_読み上げ{
+    background-color: #192f6a;
+}
+#link-btn_読み上げ a{
+    color: #e6b422;
+}
