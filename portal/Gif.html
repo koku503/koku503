@@ -18,28 +18,32 @@
 			body{
 				text-size-adjust: 100%;
                 background-color: black;
+                overflow: hidden;
 			}
             .wrap{
+                position: relative;
                 width: 100%;
                 max-width: 1000px;
                 margin: auto;
             }
-            .video{
-                width: calc(100px + 50vw);
-                height: calc((200px + 100vw)/3.236);
-                margin-top: calc(50vh - (100px + 50vw)/3.236);
-                margin-left: calc(50% - (50px + 25vw));
+            .wrap img{
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                max-width: 1000px;
+                max-height: 100vh;
             }
         </style>
         <link rel="icon" href="./img/四方紋.png">
-        <title>ポータルサイト</title>
+        <title>Gif劇場</title>
     </head>
     <body>
         <div class="index">
             <a href="../index.html">.</a>
         </div>
         <div class="wrap">
-            <iframe class="video" src="https://www.youtube.com/embed/Cha7Cf0zS-Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <img src="./img/Gif劇場ver1.gif">
         </div>
     </body>
 </html>
