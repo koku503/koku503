@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="apple-movile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" href="./img/四方紋.png">
+        <title>ループ音楽</title>
+        <style>
+            .index{
+                position: fixed;
+                left: 12px;
+                bottom: 12px;
+            }
+            .index a{
+                color: #fff1cf;
+            }
+            body{
+                font-family: sans-serif;
+                margin: 8px;
+                padding: 0;
+                border: 0;
+                text-size-adjust: 100%;
+                background-color: black;
+                color: #fff1cf;
+                font-size: 20px;
+            }
+            .wrap{
+                width: 100%;
+                max-width: 600px;
+                margin: auto;
+            }
+            p{
+                margin: 2em 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="index">
+            <a href="../index.html">.</a>
+        </div>
+        <div class="wrap">
+            <p>
+                せせらぎ<br>
+                <audio src="./audio/川～せせらぎ.mp3" loop controls></audio>            
+            </p>
+            <p>
+                Rev<br>
+                <audio src="./audio/Rev.mp3" loop controls></audio>
+            </p>
+        </div>
+        <!-- wrap -->
+    </body>
+</html>

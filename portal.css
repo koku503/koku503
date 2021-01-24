@@ -34,10 +34,13 @@ body{
 
 span.tenkai{
     display: inline-block;
+    box-sizing: border-box;
     width: 100%;
     height: 100%;
 }
-span.tenkai:hover{opacity: 0.6;}
+span.tenkai:hover{
+    border: 1px solid red;
+}
 #link-btn_時計{
     background-color: tan;
 }
