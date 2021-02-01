@@ -39,12 +39,34 @@
         li{
             white-space: nowrap;
         }
+        .index{
+            position: fixed;
+            left: 0;
+            bottom: 10px;
+            width: 10px;
+            height: 10px;
+            z-index: 3;
+        }
         .index a{
             color: #fff1cf;
         }
+        span.tenkai{
+            display: inline-block;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            background-color: #cfcfcf;
+        }
+        span.tenkai:hover{
+            background-color: red;
+        }	
     </style>
 </head>
 <body>
+    <div class="index">
+        <a href="../index.html"><span class="tenkai"></span></a>
+    </div>
     <div class="wrap">
         <div class="inner">
             <div class="content">
@@ -56,9 +78,6 @@
                     <li>ＮＨＫニュースサイト</li>
                     <li>赴く先の事前調査</li>
                 </ul>
-                <div class="index">
-                    <a href="../index.html">.</a>
-                </div>
             </div>
         </div>
     </div>

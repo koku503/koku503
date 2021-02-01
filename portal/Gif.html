@@ -5,34 +5,48 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
         <script type="text/javascript" src="./jquery-3.5.1.min.js"></script>
         <link rel="icon" href="./img/四方紋.png">
-        <title>読み上げ</title>
+        <title>Gif劇場</title>
         <style>
-            .index{
-                position: fixed;
-                left: 12px;
-                bottom: 12px;
-            }
-            .index a{
-                color: #fff1cf;
-            }
 			body{
+                margin: 0;
 				text-size-adjust: 100%;
                 background-color: black;
-                overflow: hidden;
 			}
             .wrap{
                 position: relative;
-                width: 100%;
-                max-width: 1000px;
+                width: calc(100vw - 20px);
+                height: 100vh;
                 margin: auto;
             }
             .wrap img{
                 position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                max-width: 1000px;
-                max-height: 100vh;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: auto;
+            }
+
+            .index{
+                position: fixed;
+                left: 0;
+                bottom: 10px;
+                width: 10px;
+                height: 10px;
+                z-index: 3;
+            }
+            .index a{
+                color: #fff1cf;
+            }
+            span.tenkai{
+                display: inline-block;
+                box-sizing: border-box;
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+                background-color: #fff1cf;
+            }
+            span.tenkai:hover{
+                background-color: red;
             }
         </style>
         <link rel="icon" href="./img/四方紋.png">
@@ -40,7 +54,7 @@
     </head>
     <body>
         <div class="index">
-            <a href="../index.html">.</a>
+            <a href="../index.html"><span class="tenkai"></span></a>
         </div>
         <div class="wrap">
             <img src="./img/Gif劇場ver1.gif">
