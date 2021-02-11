@@ -41,6 +41,9 @@ span.tenkai{
 span.tenkai:hover{
     border: 1px solid red;
 }
+.ffl a, .ffr a{
+    color: black;
+}
 #link-btn_時計{
     background-color: tan;
 }
@@ -55,4 +58,10 @@ span.tenkai:hover{
 }
 #link-btn_Gif劇場 a{
     color: #e6b422;
+}
+#link-btn_線形美術{
+    background-color: #316745;
+}
+#link-btn_線形美術 a{
+    color: #fff;
 }
