@@ -21,6 +21,7 @@ body{
     margin: 0;
     width: 100%;
 }
+.flex{display: flex;}
 .flex1{text-align: center;}
 .flex2l, .flex2r{display: flex;}
 .ffl{float: left;width: 50%;min-height: 2.5em;line-height: 2.5em;}

@@ -29,6 +29,59 @@
             }
         }
         </script>
+        <style>
+            .search{        
+                position: fixed;
+                bottom: 1em;
+                left: calc(50vw - 15px);            
+                width: 30px;
+                height: 30px;
+            }
+            .search-cl{
+                width: 100%;
+                height: 100%;
+                background-color: grey;
+                overflow: hidden;
+            }
+            .search-cl .flex{
+                width: 100%;
+                height: 10px;
+            }
+            .search-cl .flex div{
+                width: 10px;
+                height: 100%;
+                box-sizing: border-box;
+                border: 1px solid #fff;
+            }
+            #search{
+                display: none;
+            }
+            .search-cl{
+                display: block;
+            }
+            #search-form{
+                display: none;
+            }
+            #search:checked ~ #search-form{
+                position: relative;
+                display: block;
+                font-size: 24px;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                height: 32px;
+                width: 10em;
+                transform: translate(-50%, -50%);
+                box-sizing: border-box;
+                border: 4px solid grey;
+                z-index: 8;
+            }
+            #window{
+                position: absolute;
+                width: calc(100% - 8px);
+                height: calc(100% - 6px);
+            }
+        </style>
     </head>
     <body>
         <div class="cap">
@@ -67,5 +120,22 @@
             </div>
         </div>
         <!-- wrap -->
+        <div class="search">
+            <input type="checkbox" id="search">
+            <label class="search-cl" for="search">
+                <div class="flex">
+                    <div></div><div></div><div></div>
+                </div>
+                <div class="flex">
+                    <div></div><div></div><div></div>
+                </div>
+                <div class="flex">
+                    <div></div><div></div><div></div>
+                </div>
+            </label><!--  search-cl  -->
+            <form id="search-form" method="get" action="http://www.google.co.jp/search">
+                <input id="window" type="text" name="q" value="">
+            </form>
+        </div>
     </body>
 </html>
