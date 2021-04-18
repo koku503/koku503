@@ -1,0 +1,177 @@
+body, div, p{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html{
+    font-family: 'メイリオ';
+    text-align: justify;
+    font-size: 16px;
+    line-height: 2;
+}
+
+body{
+    margin: 0 8px;
+}
+
+.wrap{
+    background: #fff;
+    position: relative;
+    width: 100%;
+    max-width: 980px;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+/* フィルタボタン */
+.tfArea{
+    display: inline-block;
+    position: relative;
+}
+.tfImg{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #eee;
+    border: 1px solid #777;
+    margin: 1px 3px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+/* フィルタボタン（hover） */
+.tfImg:hover{
+    background: #ffd700;
+}
+
+/* フィルタボタン内画像色 */
+.tfImg path{
+    fill: #777;
+}
+
+/* フィルタリスト */
+.tfList{
+    display: inline-block;
+    position: absolute;
+    max-width: 250px;
+    min-width: 140px;
+    background: #fff;
+    border: 1px solid #777;
+    top: 15px;
+    left: 0;
+    line-height: 1.1;
+    font-weight: normal;
+}
+
+/* フィルタリスト内form */
+.tfList form{
+    max-height: 150px;
+    overflow-y: scroll;
+    overflow: auto;
+}
+
+/* フィルタリスト内チェックボックス */
+.tfMeisai{
+    text-align: left;
+    padding: 2px;
+}
+
+/* フィルタリスト内文字位置合わせ */
+.tfMeisai label{
+    padding: 0 10px 0 3px;
+}
+
+/* OK/CANCELボタン */
+.tfBtnArea{
+    text-align: center;
+    font-size: 8px;
+    padding: 3px 5px;
+}
+.tfBtnArea input{
+    display: inline-block;
+    margin: 0 5px;
+}
+
+/* 含むボタン入力エリア */
+.tfInStr{
+    padding: 5px 3px;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+}
+.tfInStr input{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1px 3px;
+    font-weight: normal;
+    font-size: 95%;
+    border: 1px solid #ccc;
+}
+
+/* フィルタ非表示 */
+#sampleTable tr[cmanFilterNone]{
+    display: none;
+}
+
+/* フィルタ非表示行と次行の間を二重線 */
+#sampleTable tr[cmanFilterNone] + tr td{
+    border-top: 3px double #777;
+}
+
+/* テーブル全体のスタイル */
+#sampleTable{
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+#sampleTable tr td:nth-child(1){
+    text-align: right;
+}
+#sampleTable tr td:nth-child(2){
+    text-align: right;
+}
+#sampleTable tr td:first-child{
+    width: 0;
+    border: 0;
+}
+
+/* ヘッダーのスタイル */
+#sampleTable th{
+    text-align: center;
+    font-weight: bold;
+    padding: 3px 5px;
+    border: 1px #666666 solid;
+    background: #99ccff;
+    white-space: nowrap;
+}
+
+/* 明細のスタイル */
+#sampleTable td{
+    padding: 3px 5px;
+    border: 1px #666666 solid;
+    white-space: nowrap;
+}
+
+/* ヘッダー行固定 */
+#sampleTable th{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* ==== */
+.full-btn{
+    position: fixed;
+    bottom: 4px;
+}
+.article{
+    padding: 0 8px;
+}
+
+/* 各ご縁の見出し */
+h2{
+    font-size: 20px;
+    margin: -44px 0 16px 0;
+    padding-top: 60px;
+}
