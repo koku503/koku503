@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" id="html">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
@@ -8,24 +8,44 @@
         <script type="text/javascript" src="./youroku.js"></script>
     </head>
     <body>
+        <div class="floatBtn"><a href="#html"><span>&and;</span></a></div>
         <div class="wrap" id="wrap">
-            <div class="full-btn">
-                <button id="full-btn">フルスクリーン表示</button>
-                <button id="crose-btn">解除</button>
+            <div class="sampleTable" id="div-sample">
+                <table id="sampleTable">
+                    <tr>
+                        <td></td>
+                        <th cmanFilterBtn>年</th>
+                        <th cmanFilterBtn>月</th>
+                        <th cmanFilterBtn>種類</th>
+                        <th cmanFilterBtn>タグ</th>
+                    </tr>
+                    <tr><td></td><td>2021</td><td>4</td><td><a href="#taiwa@2021-04">対話</a></td><td>信心</td></tr>
+                </table>
             </div>
-            <table id="sampleTable">
-                <tr>
-                    <td></td>
-                    <th cmanFilterBtn>年</th>
-                    <th cmanFilterBtn>月</th>
-                    <th cmanFilterBtn>種類</th>
-                    <th cmanFilterBtn>タグ</th>
-                </tr>
-                <tr><td></td><td>2021</td><td>4</td><td><a href="#taiwa@2021-04">対話</a></td><td></td></tr>
-            </table>
-            <div class="article">
-                <h2 id="taiwa@2021-04">2021年4月対話</h2>
+            <!-- //div.sampleTable -->
+            <div class="article" id="article">
+                <p>
+                    <h2 id="taiwa@2021-04">2021年4月対話</h2>
+                    名号をいただいたのが信心。<br>
+                    名号は薬、信心は病が全快したこと。<br>
+                    全人類が、無明業障の恐ろしき病に罹っている。（御文章五帖目十三通）<br>
+                    <ul>
+                        無明業障の恐ろしき病の症状
+                        <li>死んだらどうなるか分からない</li>
+                        <li>生まれてきた喜びがない</li>
+                        <li>科学が進歩して生活が便利になっても、心から喜べない</li>
+                        <li>何のために生きているか分からない</li>
+                    </ul>
+                    名号の働きだけを他力という。<br>
+                    名号とは南無阿弥陀仏。六字の名号ともいう。<br>
+                    さのみ功能のあるべからざるに、…無上甚深の功徳利益の広大なること、更にその極まりなきものなり。<br>
+                    他力本願：本願とは、阿弥陀仏の本当の願い。無明業障の恐ろしき病を治してやりたいという願い。<br>
+                    名号、信心、念仏は、浄土真宗で最も重要な仏語。<br>
+                    他力、自力は、その次に重要な言葉。
+                </p>
             </div>
+            <!-- //article -->
         </div>
+        <!-- //wrap -->
     </body>
 </html>
