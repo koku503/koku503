@@ -1,0 +1,218 @@
+body{
+    margin: 8px;
+    font-family: '游明朝', sans-serif;
+    font-size: 16px;
+    text-align: justify;
+}
+#top{
+    position: absolute;
+    top: 0;
+}
+div.wrap{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+}
+
+/* 上部に固定 */
+#ftcb, .ftcb{
+    position: fixed;
+    top: 8px;
+    z-index: 5;
+    cursor: pointer;
+}
+#ftcb{
+    left: 8px;
+}
+label.ftcb{
+    left: 27px;
+    font-size: 14px;
+}
+#ftcb:checked ~ .fix-top, #ftcb:checked ~ .foot{
+    display: none;
+}
+#ftcb:checked, #ftcb:checked ~ label.ftcb{
+    background-color: azure;
+}
+
+div.fix-top{
+    width: 100%;
+    padding: 8px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: beige;
+}
+.fix-top-1{
+    position: relative;
+    width: 100%;
+    max-width: 980px;
+    margin: auto;
+}
+.fix-top-1 h1{
+    margin: 1rem 0 26px;
+}
+.form0{
+    width: 15em;
+    max-width: calc(100% - 2em);
+    margin: auto;
+}
+.search{
+    position: relative;
+    height: 2em;
+    width: 100%;
+}
+.input0{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 3em - 2px);
+    height: calc(1em - 2px);
+    padding: 0.5em 2.5em 0.5em 0.5em;
+    border: 1px solid #dfe1e5;
+    border-radius: 1em;
+}
+.input1{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 2em;
+    height: 2em;
+    border: none;
+    background-color: transparent;
+    background-image: url(./common/サーチアイコン.svg);
+    cursor: pointer;
+}
+.input0:focus{
+    outline: none;
+}
+.input1:hover{
+    outline: none;
+    opacity: 0.6;
+}
+.ue{
+    display: flex;
+}
+.fix-top-1 .ue{
+    position: absolute;
+    right: 0;
+    top: 40px;
+}
+.ue> div{
+    margin-left: 4px;
+}
+.navi{
+    position: fixed;
+    top: 0;
+    right: 8px;
+}
+.navi li{
+    list-style: none;
+}
+/* ==ここまで上部固定== */
+
+div.main{
+    min-height: calc(100vh - 96px);
+}
+.fix-top ~ .main{
+    margin-top: 124px;
+    min-height: calc(100vh - 124px);
+}
+.flex{
+    display: flex;
+}
+h1{
+    font-size: 26px;text-align: center;line-height: 1.5;
+}
+h2{
+    font-size: 22px;text-align: center;line-height: 1.5;
+}
+h3{
+    font-size: 18px;
+}
+td, th{
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+}
+div.wrap-1, div.wrap-2{
+    width: calc(100% - 22px - 2em);
+    margin: 20px 10px;
+    padding: 1em;
+    border: 1px solid gainsboro;
+    border-radius: 18px;
+}
+
+@media screen and (min-width: 600px){
+    div.wrap-flex{
+        display: flex;
+    }
+    div.wrap-1{
+        width: calc(50vw - 56px);
+    }
+    .navi{
+        right: 56px;
+    }
+}
+@media screen and (min-width: 980px){
+    #ftcb{
+    	left: calc((100vw - 980px)/2);
+    }
+    label.ftcb{
+    	left: calc((100vw - 980px)/2 + 19px);
+    }
+}
+span.wl-btn{
+    display: inline-block;
+    width: calc(100% - 8px);
+    padding: 0 4px;
+    color: blue;
+    text-decoration: blue underline;
+}
+span.wl-btn:hover{
+    background-color: azure;
+}
+
+/* foot */
+.foot{
+    position: absolute;
+    /* bottom: -8px; */
+    top: 100%;
+    width: 100%;
+}
+#purple{
+    display: none;
+}
+label.purple{
+    display: block;
+    padding: 1em;
+    width: calc(100% - 2em);
+    margin: auto;
+    background-color: #dfbd6f;
+}
+label.purple a{
+    color: #fff;
+}
+label.purple a:active{
+    color: azure;
+}
+div.purple{
+    width: calc(100% - 2em);
+    display: none;
+}
+#purple:checked ~ label.purple div.purple{
+    display: block;
+}
+
+/* table */
+table.bd-table{
+    border-collapse: collapse;
+    max-width: calc(100% - 2em);
+    margin: 0 auto;
+}
+table.bd-table th, table.bd-table td{
+    border: 1px solid black;
+}
+table.bd-table th{
+    text-align: center;
+}

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>職業記</title>
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <script type="text/javascript">
+            function AutoFocus(){
+                return document.form0.input0.focus();
+            }
+            function JumpIn(){
+                var Input = document.forms['form0'].elements['input0'].value;
+                location.href = ("#" + Input);
+            }
+        </script>
+    <body onload="AutoFocus();">
+        <div id="top"></div>
+        <div class="wrap">
+            <input type="checkbox" id="ftcb">
+            <label for="ftcb" class="ftcb">タイトルを隠す</label>
+            <div class="fix-top">
+                <div class="fix-top-1">
+                    <h1>用語集</h1>
+                    <div class="ue">
+                        <div>
+                            <a href="../index.html"><span class="wl-btn">1つ上</span></a>
+                        </div>
+                        <div>
+                            <a href="#top"><span class="wl-btn">トップ</span></a>
+                        </div>
+                        <div>
+                            <a href="#bottom"><span class="wl-btn">ボトム</span></a>
+                        </div>
+                    </div>
+                    <form name="form0" class="form0" name="form0">
+                        <div class="search">
+                            <input type="text" name="input0" class="input0" onkeypress="JumpIn();" autofocus>
+                            <input type="button" value="" onclick="JumpIn();" class="input1">
+                        </div>
+                    </form>
+                </div>
+                <!-- fix-top-1 -->
+            </div>
+            <!-- fix-top -->
+            <div class="main">
+                <div class="wrap-flex">
+                    <div class="wrap-2">
+                        <!-- ここに記入 -->
+                        <table class="bd-table">
+                            <thead>
+                                <tr>
+                                    <th>用語</th>
+                                    <th>読み</th>
+                                    <th>分類</th>
+                                    <th>説明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr id="CV">
+                                    <td>CV</td>
+                                    <td>CV</td>
+                                    <td>電気工事</td>
+                                    <td>CVケーブル＝架橋ポリエチレン絶縁ビニルシースケーブル。<br>仮設ケーブルに多い。</td>
+                                </tr>
+                                <tr id="CVV">
+                                    <td>CVV</td>
+                                    <td>CVV</td>
+                                    <td>電気工事</td>
+                                    <td></td>
+                                </tr>
+				                    <tr id="CE">
+                                    <td>CE</td>
+                                    <td>CE</td>
+                                    <td>電気工事</td>
+                                    <td></td>
+                                </tr>
+                                <tr id="CEE">
+                                    <td>CEE</td>
+                                    <td>CEE</td>
+                                    <td>電気工事</td>
+                                    <td></td>
+                                </tr>
+                                <tr id="単相">
+                                    <td>単相</td>
+                                    <td>たんそう</td>
+                                    <td>電気工事</td>
+                                    <td></td>
+                                </tr>
+                                <tr id="三相">
+                                    <td>三相</td>
+                                    <td>さんそう</td>
+                                    <td>電気工事</td>
+                                    <td></td>
+                                </tr>
+                                <tr id="結線図">
+                                    <td>結線図</td>
+                                    <td>けっせんず</td>
+                                    <td>電気工事</td>
+                                    <td></td>
+                                </tr>
+                                <tr id="シーケンス図">
+                                    <td>シーケンス図</td>
+                                    <td>しーけんすず</td>
+                                    <td>電気工事</td>
+                                    <td></td>
+                                </tr>
+                                <tr id="仮設配線経路図">
+                                    <td>仮設配線経路図</td>
+                                    <td>かせつはいせんけいろず</td>
+                                    <td>電気工事</td>
+                                    <td></td>
+                                </tr>
+                                <tr id="ケーブルスケジュール">
+                                    <td>ケーブルスケジュール</td>
+                                    <td>けーぶるすけじゅーる</td>
+                                    <td>電気工事</td>
+                                    <td></td>
+                                </tr>
+                                <tr id="低圧ケーブル">
+                                    <td>低圧ケーブル</td>
+                                    <td>ていあつけーぶる</td>
+                                    <td>電気工事</td>
+                                    <td></td>
+                                </tr>
+                                <tr id="高圧ケーブル">
+                                    <td>高圧ケーブル</td>
+                                    <td>こうあつけーぶる</td>
+                                    <td>電気工事</td>
+                                    <td></td>
+                                </tr>
+                                <tr id="6C">
+                                    <td>6C</td>
+                                    <td>6C</td>
+                                    <td>電気工事</td>
+                                    <td></td>
+                                </tr>
+                                <tr id="墨出し">
+                                    <td>墨出し</td>
+                                    <td>すみだし</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="圧着端子">
+                                    <td>圧着端子</td>
+                                    <td>あっちゃくたんし</td>
+                                    <td>電気工事</td>
+                                    <td></td>
+                                </tr>
+                                <tr id="裸圧着端子">
+                                    <td>裸圧着端子</td>
+                                    <td>はだかあっちゃくたんし</td>
+                                    <td>電気工事</td>
+                                    <td></td>
+                                </tr>
+                                <tr id="絶縁付圧着端子">
+                                    <td>絶縁付圧着端子</td>
+                                    <td>ぜつえんつきあっちゃくたんし</td>
+                                    <td>電気工事</td>
+                                    <td></td>
+                                </tr>
+                                <tr id="トルクレンチ">
+                                    <td>トルクレンチ</td>
+                                    <td>とるくれんち</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="工具管理台帳">
+                                    <td>工具管理台帳</td>
+                                    <td>こうぐかんりだいちょう</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="現地施工報告書">
+                                    <td>現地施工報告書</td>
+                                    <td>げんちせこうほうこくしょ</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="電気工事士">
+                                    <td>電気工事士</td>
+                                    <td>でんきこうじし</td>
+                                    <td>電気工事</td>
+                                    <td></td>
+                                </tr>
+                                <tr id="搬送作業">
+                                    <td>搬送作業</td>
+                                    <td>はんそうさぎょう</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="地切り">
+                                    <td>地切り</td>
+                                    <td>じぎり</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="安全帯の種類">
+                                    <td>安全帯の種類</td>
+                                    <td>あんぜんたいのしゅるい</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="SGセト―">
+                                    <td>SG</td>
+                                    <td>SGセト―</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="オリオン">
+                                    <td>オリオン</td>
+                                    <td>おりおん</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="アンドロメダ">
+                                    <td>アンドロメダ</td>
+                                    <td>あんどろめだ</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="バルーン灯"></tr>
+                                <tr id="B灯">
+                                    <td>B灯（バルーン灯）</td>
+                                    <td>ばるーんとう</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="テープ灯"></tr>
+                                <tr id="テ灯">
+                                    <td>テ灯（テープ灯）</td>
+                                    <td>てーぷとう</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="SQ"></tr>
+                                <tr id="sq">
+                                    <td>sq</td>
+                                    <td>sq</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="オーバーロード"></tr>
+                                <tr id="OL">
+                                    <td>OL（オーバーロード）</td>
+                                    <td>OL</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>                                                                        
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="foot">
+                <input type="checkbox" id="purple">
+                <label class="purple" for="purple">
+                    <div class="purple">
+                        <a href="../man.html">man</a>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <!-- wrap -->
+        <div id="bottom"></div>
+    </body>
+</html>
