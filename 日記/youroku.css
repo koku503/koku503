@@ -242,6 +242,7 @@ h2{
     font-stretch: 300%;
     text-align: center;
     background-color: #777;
+    opacity: 0.9;
 }
 .floatBtn a{
     color: #fff;
